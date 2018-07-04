@@ -1,0 +1,19 @@
+{
+  "name": "simplewebdriver",
+  "version": "1.0.0",
+  "description": "WebDriver js examples",
+  "main": "simpleTestChaiMocha.js",
+  "dependencies": {
+    "chai": "^4.1.2",
+    "mochawesome": "^3.0.2",
+    "selenium-webdriver": "^4.0.0-alpha.1"
+  },
+  "devDependencies": {
+    "mocha": "^5.2.0"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "author": "Tom Millichamp",
+  "license": "ISC"
+}

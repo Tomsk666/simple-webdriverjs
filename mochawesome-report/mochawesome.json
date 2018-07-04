@@ -1,0 +1,111 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2018-07-03T16:36:48.662Z",
+    "end": "2018-07-03T16:37:00.980Z",
+    "duration": 12318,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false,
+    "passPercentClass": "success",
+    "pendingPercentClass": "danger"
+  },
+  "suites": {
+    "uuid": "c8e6af66-5a6f-4e03-bb05-6a13802007e5",
+    "title": "",
+    "fullFile": "",
+    "file": "",
+    "beforeHooks": [],
+    "afterHooks": [],
+    "tests": [],
+    "suites": [
+      {
+        "uuid": "f9a39ebd-9f11-4658-9271-490383c9c00b",
+        "title": "Mocha Example Tests",
+        "fullFile": "C:\\Users\\Tom\\Documents\\Visual Code Projects\\SimpleWebDriver\\test\\simpleTestChaiMocha.js",
+        "file": "\\test\\simpleTestChaiMocha.js",
+        "beforeHooks": [
+          {
+            "title": "\"before each\" hook",
+            "fullTitle": "Mocha Example Tests \"before each\" hook",
+            "timedOut": false,
+            "duration": 2284,
+            "pass": false,
+            "fail": false,
+            "pending": false,
+            "code": "driver = await new Builder()\n.forBrowser('chrome')\n.build();",
+            "err": {},
+            "isRoot": false,
+            "uuid": "4992586b-a654-4e07-9b94-ae4e5fa2243a",
+            "isHook": true,
+            "skipped": false
+          }
+        ],
+        "afterHooks": [
+          {
+            "title": "\"after each\" hook",
+            "fullTitle": "Mocha Example Tests \"after each\" hook",
+            "timedOut": false,
+            "duration": 213,
+            "pass": false,
+            "fail": false,
+            "pending": false,
+            "code": "await driver.quit();",
+            "err": {},
+            "isRoot": false,
+            "uuid": "2bd48f22-a002-4b0c-8b79-e80e1126fa53",
+            "isHook": true,
+            "skipped": false
+          }
+        ],
+        "tests": [
+          {
+            "title": "adds item to basket",
+            "fullTitle": "Mocha Example Tests adds item to basket",
+            "timedOut": false,
+            "duration": 9814,
+            "state": "passed",
+            "speed": "slow",
+            "pass": true,
+            "fail": false,
+            "pending": false,
+            "code": "await driver.get('https://www.edgewordstraining.co.uk/demo-site/');\nawait driver.findElement(By.id('woocommerce-product-search-field-0')).click();\nawait driver.findElement(By.id('woocommerce-product-search-field-0')).clear();\nawait driver.findElement(By.id('woocommerce-product-search-field-0')).sendKeys('cap', Key.RETURN);\nawait driver.findElement(By.name('add-to-cart')).click();\nawait driver.findElement(By.linkText('Cart')).click();\nawait driver.findElement(By.linkText('×')).click();\n// synchronisation\nconst element = await driver.wait(until.elementLocated(By.xpath('//*[@id=\"post-5\"]/div/div[2]/p[2]/a')), 15000, 'Element did not appear after waiting for 15s');\nawait driver.findElement(By.linkText('Return to shop')).click();\nawait driver.findElement(By.linkText('Home')).click();\nconst title = await driver.getTitle();\nassert.equal(title, 'Edgewords Shop – e-commerce demo site for Training', 'Title should match expected value!');",
+            "err": {},
+            "isRoot": false,
+            "uuid": "74f7354d-06d5-4ad6-9397-e119f777fa84",
+            "isHook": false,
+            "skipped": false
+          }
+        ],
+        "suites": [],
+        "passes": [
+          "74f7354d-06d5-4ad6-9397-e119f777fa84"
+        ],
+        "failures": [],
+        "pending": [],
+        "skipped": [],
+        "duration": 9814,
+        "root": false,
+        "rootEmpty": false,
+        "_timeout": 0
+      }
+    ],
+    "passes": [],
+    "failures": [],
+    "pending": [],
+    "skipped": [],
+    "duration": 0,
+    "root": true,
+    "rootEmpty": true,
+    "_timeout": 0
+  },
+  "copyrightYear": 2018
+}
