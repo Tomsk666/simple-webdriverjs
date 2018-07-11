@@ -4,6 +4,8 @@ const {Builder, By, Key, until} = require('selenium-webdriver');
 require('chromedriver'); // only added as used npm install chromedriver to install into node_modules
 var chai = require('chai');
 var assert = chai.assert;
+const addContext = require('mochawesome/addContext');
+const lib = require ('./funcLib.js');
 
 // This describes the test Suite:
 describe('Mocha Example Tests', function () {
@@ -26,12 +28,18 @@ describe('Mocha Example Tests', function () {
     });
 
     // This is a Test Case
-    it('adds item to basket', async function () {
+    it('adds an item to basket', async function () {
+        addContext(this, 'This is some output from mochawesome addContext!');
         await driver.get('https://www.edgewordstraining.co.uk/demo-site/');
-
+        
+        await lib.waitForVisible(driver, By.id('woocommerce-product-search-field-0'), 10000);
+        /*
         await driver.findElement(By.id('woocommerce-product-search-field-0')).click();
         await driver.findElement(By.id('woocommerce-product-search-field-0')).clear();
         await driver.findElement(By.id('woocommerce-product-search-field-0')).sendKeys('cap', Key.RETURN);
+        */
+        await lib.sendKeys(driver, By.id('woocommerce-product-search-field-0'),'cap' + Key.RETURN);
+
         await driver.findElement(By.name('add-to-cart')).click();
         await driver.findElement(By.linkText('Cart')).click();
         // check cap is in the cart
