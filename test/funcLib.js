@@ -38,8 +38,6 @@ async function sendKeys (driver, locator, thekeys) {
     }
 }
 
-    
 module.exports.waitForVisible = waitForVisible;
 module.exports.getText = getText;
 module.exports.sendKeys = sendKeys;
-  
