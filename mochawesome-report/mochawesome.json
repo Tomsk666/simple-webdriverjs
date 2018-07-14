@@ -5,9 +5,9 @@
     "passes": 2,
     "pending": 0,
     "failures": 0,
-    "start": "2018-07-13T20:59:19.539Z",
-    "end": "2018-07-13T20:59:44.821Z",
-    "duration": 25282,
+    "start": "2018-07-14T07:58:46.288Z",
+    "end": "2018-07-14T07:59:11.620Z",
+    "duration": 25332,
     "testsRegistered": 2,
     "passPercent": 100,
     "pendingPercent": 0,
@@ -19,7 +19,7 @@
     "pendingPercentClass": "danger"
   },
   "suites": {
-    "uuid": "c88b7271-08ee-4085-8ad0-78c064cac475",
+    "uuid": "6fd2aa06-5fc8-4488-8bff-daf21abb4e49",
     "title": "",
     "fullFile": "",
     "file": "",
@@ -28,7 +28,7 @@
     "tests": [],
     "suites": [
       {
-        "uuid": "ebfe2e30-dcdd-4818-94dc-f6445b6fdada",
+        "uuid": "e6c1349f-b841-4d27-b7e5-8ddc6857debc",
         "title": "Mocha Example Tests",
         "fullFile": "C:\\Users\\Tom\\Documents\\Visual Code Projects\\SimpleWebDriver\\test\\simpleTestChaiMocha.js",
         "file": "\\test\\simpleTestChaiMocha.js",
@@ -37,14 +37,14 @@
             "title": "\"before each\" hook",
             "fullTitle": "Mocha Example Tests \"before each\" hook",
             "timedOut": false,
-            "duration": 2360,
+            "duration": 2480,
             "pass": false,
             "fail": false,
             "pending": false,
             "code": "driver = await new Builder()\n    .forBrowser('chrome')\n    .build();\n//await driver.manage().timeouts().implicitlyWait(5000); // This throws an error for some reason\nawait driver.manage().setTimeouts({ implicit: TIMEOUT, pageLoad: TIMEOUT, script: TIMEOUT });",
             "err": {},
             "isRoot": false,
-            "uuid": "8d496e7c-2361-4707-9dc5-f881108f8893",
+            "uuid": "1be36e0d-b55c-4895-bdbc-30a7f5df9f87",
             "isHook": true,
             "skipped": false
           }
@@ -54,14 +54,14 @@
             "title": "\"after each\" hook",
             "fullTitle": "Mocha Example Tests \"after each\" hook",
             "timedOut": false,
-            "duration": 256,
+            "duration": 236,
             "pass": false,
             "fail": false,
             "pending": false,
             "code": "await driver.quit();",
             "err": {},
             "isRoot": false,
-            "uuid": "979edfa9-3de0-418d-996f-95b516465532",
+            "uuid": "8cf951bd-7183-4442-8df1-8270dc6461e0",
             "isHook": true,
             "skipped": false
           }
@@ -71,7 +71,7 @@
             "title": "adds an item to basket",
             "fullTitle": "Mocha Example Tests adds an item to basket",
             "timedOut": false,
-            "duration": 10591,
+            "duration": 10568,
             "state": "passed",
             "speed": "slow",
             "pass": true,
@@ -81,25 +81,25 @@
             "code": "addContext(this, 'This is some output from mochawesome addContext!');\nawait driver.get('https://www.edgewordstraining.co.uk/demo-site/');\nawait lib.waitForVisible(driver, By.id('woocommerce-product-search-field-0'), 10000);\n/*\nawait driver.findElement(By.id('woocommerce-product-search-field-0')).click();\nawait driver.findElement(By.id('woocommerce-product-search-field-0')).clear();\nawait driver.findElement(By.id('woocommerce-product-search-field-0')).sendKeys('cap', Key.RETURN);\n*/\nawait lib.sendKeys(driver, By.id('woocommerce-product-search-field-0'), 'cap' + Key.RETURN);\nawait driver.findElement(By.name('add-to-cart')).click();\nawait driver.findElement(By.linkText('Cart')).click();\n// check cap is in the cart\nassert.isTrue(await driver.findElement(By.linkText('Cap')).isDisplayed(), 'Cap was not in cart!');\nawait driver.findElement(By.linkText('×')).click();\n// synchronisation\nconst element = await driver.wait(until.elementLocated(By.xpath('//*[@id=\"post-5\"]/div/div[2]/p[2]/a')), 15000, 'Element did not appear after waiting for 15s');\nawait driver.findElement(By.linkText('Return to shop')).click();\nawait driver.findElement(By.linkText('Home')).click();\nconst title = await driver.getTitle();\nassert.equal(title, 'Edgewords Shop – e-commerce demo site for Training', 'Title should match expected value!');",
             "err": {},
             "isRoot": false,
-            "uuid": "6254ed6e-4e47-414a-b58f-fbf3e269328f",
+            "uuid": "a8e3cf0b-1d58-4ac4-9663-67caf2651e3c",
             "isHook": false,
             "skipped": false
           }
         ],
         "suites": [],
         "passes": [
-          "6254ed6e-4e47-414a-b58f-fbf3e269328f"
+          "a8e3cf0b-1d58-4ac4-9663-67caf2651e3c"
         ],
         "failures": [],
         "pending": [],
         "skipped": [],
-        "duration": 10591,
+        "duration": 10568,
         "root": false,
         "rootEmpty": false,
         "_timeout": 0
       },
       {
-        "uuid": "830a7f4f-1585-4f4b-8030-f3fa9b1afe96",
+        "uuid": "ddc8f8cd-fbe8-48e0-96ee-7bf56ceda486",
         "title": "Mocha Example POM",
         "fullFile": "C:\\Users\\Tom\\Documents\\Visual Code Projects\\SimpleWebDriver\\test\\TestPOM.js",
         "file": "\\test\\TestPOM.js",
@@ -108,14 +108,14 @@
             "title": "\"before each\" hook",
             "fullTitle": "Mocha Example POM \"before each\" hook",
             "timedOut": false,
-            "duration": 1815,
+            "duration": 1840,
             "pass": false,
             "fail": false,
             "pending": false,
             "code": "driver = await new Builder()\n    .forBrowser('chrome')\n    .build();\n//await driver.manage().timeouts().implicitlyWait(5000); // This throws an error for some reason\nawait driver.manage().setTimeouts({ implicit: TIMEOUT, pageLoad: TIMEOUT, script: TIMEOUT });",
             "err": {},
             "isRoot": false,
-            "uuid": "65cf8a66-b51f-4d87-8986-cb0947110bb0",
+            "uuid": "e76de2ac-eef3-4a09-b1df-dad69e86f0c0",
             "isHook": true,
             "skipped": false
           }
@@ -125,14 +125,14 @@
             "title": "\"after each\" hook",
             "fullTitle": "Mocha Example POM \"after each\" hook",
             "timedOut": false,
-            "duration": 209,
+            "duration": 248,
             "pass": false,
             "fail": false,
             "pending": false,
             "code": "await driver.quit();",
             "err": {},
             "isRoot": false,
-            "uuid": "d3ce39a6-7e6b-43e9-97a2-7919cd2399ea",
+            "uuid": "955bfd58-da6f-4a99-a603-74792db4e176",
             "isHook": true,
             "skipped": false
           }
@@ -142,29 +142,29 @@
             "title": "POM adds an item to basket",
             "fullTitle": "Mocha Example POM POM adds an item to basket",
             "timedOut": false,
-            "duration": 10035,
+            "duration": 9948,
             "state": "passed",
             "speed": "slow",
             "pass": true,
             "fail": false,
             "pending": false,
             "context": "\"This is some output from mochawesome addContext!\"",
-            "code": "addContext(this, 'This is some output from mochawesome addContext!');\nawait driver.get('https://www.edgewordstraining.co.uk/demo-site/');\nawait lib.waitForVisible(driver, By.id('woocommerce-product-search-field-0'), 10000);\n/*\nawait driver.findElement(By.id('woocommerce-product-search-field-0')).click();\nawait driver.findElement(By.id('woocommerce-product-search-field-0')).clear();\nawait driver.findElement(By.id('woocommerce-product-search-field-0')).sendKeys('cap', Key.RETURN);\n*/\n//await lib.sendKeys(driver, By.id('woocommerce-product-search-field-0'), 'cap' + Key.RETURN);\nawait homePage.searchProduct(driver,'cap');\n\nawait driver.findElement(By.name('add-to-cart')).click();\nawait driver.findElement(By.linkText('Cart')).click();\n// check cap is in the cart\nassert.isTrue(await driver.findElement(By.linkText('Cap')).isDisplayed(), 'Cap was not in cart!');\nawait driver.findElement(By.linkText('×')).click();\n// synchronisation\nconst element = await driver.wait(until.elementLocated(By.xpath('//*[@id=\"post-5\"]/div/div[2]/p[2]/a')), 15000, 'Element did not appear after waiting for 15s');\nawait driver.findElement(By.linkText('Return to shop')).click();\nawait driver.findElement(By.linkText('Home')).click();\nconst title = await driver.getTitle();\nassert.equal(title, 'Edgewords Shop – e-commerce demo site for Training', 'Title should match expected value!');",
+            "code": "addContext(this, 'This is some output from mochawesome addContext!');\nawait driver.get('https://www.edgewordstraining.co.uk/demo-site/');\n// call my function lib:\nawait lib.waitForVisible(driver, By.id('woocommerce-product-search-field-0'), 10000);\n// call my POM:\nawait homePage.searchProduct(driver,'cap');\n//await lib.sendKeys(driver,homePage.searchField,'cap' + Key.RETURN);\n\nawait driver.findElement(By.name('add-to-cart')).click();\nawait driver.findElement(By.linkText('Cart')).click();\n// check cap is in the cart\nassert.isTrue(await driver.findElement(By.linkText('Cap')).isDisplayed(), 'Cap was not in cart!');\nawait driver.findElement(By.linkText('×')).click();\n// synchronisation\nconst element = await driver.wait(until.elementLocated(By.xpath('//*[@id=\"post-5\"]/div/div[2]/p[2]/a')), 15000, 'Element did not appear after waiting for 15s');\nawait driver.findElement(By.linkText('Return to shop')).click();\nawait driver.findElement(By.linkText('Home')).click();\nconst title = await driver.getTitle();\nassert.equal(title, 'Edgewords Shop – e-commerce demo site for Training', 'Title should match expected value!');",
             "err": {},
             "isRoot": false,
-            "uuid": "eecb1e5e-a91b-4562-a98d-ba105a97eb4d",
+            "uuid": "bdddce37-9fb9-4b75-a200-4b1d47c279e6",
             "isHook": false,
             "skipped": false
           }
         ],
         "suites": [],
         "passes": [
-          "eecb1e5e-a91b-4562-a98d-ba105a97eb4d"
+          "bdddce37-9fb9-4b75-a200-4b1d47c279e6"
         ],
         "failures": [],
         "pending": [],
         "skipped": [],
-        "duration": 10035,
+        "duration": 9948,
         "root": false,
         "rootEmpty": false,
         "_timeout": 0

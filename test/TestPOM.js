@@ -36,6 +36,7 @@ describe('Mocha Example POM', function () {
         await lib.waitForVisible(driver, By.id('woocommerce-product-search-field-0'), 10000);
         // call my POM:
         await homePage.searchProduct(driver,'cap');
+        //await lib.sendKeys(driver,homePage.searchField,'cap' + Key.RETURN);
         
         await driver.findElement(By.name('add-to-cart')).click();
         await driver.findElement(By.linkText('Cart')).click();
