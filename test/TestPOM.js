@@ -1,19 +1,18 @@
 // This adds the Mocha framework to create a Test Suite & a single Test case
 // ensure you used 'npm install mocha' before trying
 const { Builder, By, Key, until } = require('selenium-webdriver');
-require('chromedriver'); // only added as used npm install chromedriver to install into node_modules
+require('chromedriver'); 
 var chai = require('chai');
 var assert = chai.assert;
 const addContext = require('mochawesome/addContext');
 const lib = require('./funcLib.js');
-var homePage = require('./poms/homePage.js');
+var homePage = require('./../poms/homePage.js');
 
 // This describes the test Suite:
 describe('Mocha Example POM', function () {
     //this.timeout(0);  // default for mocha is 2000 for a test to finish, ours take much longer! so 0 turns off, set in mocha.opts
     //this.retries(4);  // you can use this to tell mocha to re-run failed tests, in this case up to 4 times
     let driver;
-    const TIMEOUT = 5000;
 
     // beforeEach & afterEach get called for every test (it) in the suite
     beforeEach(async function () {
@@ -21,7 +20,7 @@ describe('Mocha Example POM', function () {
             .forBrowser('chrome')
             .build();
         //await driver.manage().timeouts().implicitlyWait(5000); // This throws an error for some reason
-        await driver.manage().setTimeouts({ implicit: TIMEOUT, pageLoad: TIMEOUT, script: TIMEOUT });
+        await driver.manage().setTimeouts({ implicit: 10000, pageLoad: 60000, script: 10000 });
     });
 
     afterEach(async function () {
@@ -33,9 +32,12 @@ describe('Mocha Example POM', function () {
         addContext(this, 'This is some output from mochawesome addContext!');
         await driver.get('https://www.edgewordstraining.co.uk/demo-site/');
         // call my function lib:
-        await lib.waitForVisible(driver, By.id('woocommerce-product-search-field-0'), 10000);
+        await lib.waitForVisible(driver, homePage.searchField, 10000);
         // call my POM:
         await homePage.searchProduct(driver,'cap');
+
+
+        
         //await lib.sendKeys(driver,homePage.searchField,'cap' + Key.RETURN);
         
         await driver.findElement(By.name('add-to-cart')).click();
