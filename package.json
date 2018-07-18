@@ -1,7 +1,8 @@
 {
-  "name": "simplewebdriver",
+  "name": "@edgewords/simplewebdriver",
   "version": "1.0.0",
   "description": "WebDriver js examples",
+  "homepage": "https://github.com/Tomsk666/simple-webdriverjs",
   "main": "simpleTestChaiMocha.js",
   "dependencies": {
     "chai": "^4.1.2",
@@ -15,5 +16,5 @@
     "test": "mocha"
   },
   "author": "Tom Millichamp",
-  "license": "ISC"
+  "license": "UNLICENSED"
 }
