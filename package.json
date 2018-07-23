@@ -1,6 +1,7 @@
 {
   "name": "@edgewords/simplewebdriver",
   "version": "1.0.0",
+  "private": true,
   "description": "WebDriver js examples",
   "homepage": "https://github.com/Tomsk666/simple-webdriverjs",
   "main": "simpleTestChaiMocha.js",
@@ -8,6 +9,7 @@
     "chai": "^4.1.2",
     "chromedriver": "^2.40.0",
     "mocha": "^5.2.0",
+    "mocha-junit-reporter": "^1.17.0",
     "mochawesome": "^3.0.2",
     "selenium-webdriver": "^4.0.0-alpha.1"
   },
